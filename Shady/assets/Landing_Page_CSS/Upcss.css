@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css2?family=Work+Sans&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(70deg, rgb(245, 245, 245),rgb(0, 0, 0));
+}
+
+.container {
+    max-width: 700px;
+    height: 700px;
+    width: 100%;
+    background-color: snow;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+/* Information form */
+.container .logo {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.container .title {
+    font-size: 22px;
+    font-weight: 90px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.container .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100px;
+    background: linear-gradient(-95deg, rgb(255, 255, 255), rgb(0, 0, 0))
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 193, 193);
+    padding-left: 15px;
+    font-size: 15px;
+    border-bottom-width: 1px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: rgb(8, 8, 8);
+}   
+
+/* Gender form */
+form .gender-details {
+    width: 100%;
+    margin-top: 15px;
+}
+
+form .gender-details .gender-title{
+    width: 30%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 10px 40px 10px 70px;
+    justify-content: space-between;
+}
+
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+}
+
+/* Custom radio buttons */
+.gender-details .category .gender{
+    padding-left: 0px;
+}
+
+.gender-details .category .dot {
+    height: 18px;
+    width: 18px;
+    background: rgb(206, 205, 205);
+    border-radius: 50%;
+    margin: 1px;
+    border: 5px solid transparent;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color: rgb(214, 215, 216);   
+    background: #3c3b3b;    
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+form .button{
+    height: 45px;
+    width: 100%;
+    margin: 0px;
+}
+
+form .button input{
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    color: snow;
+    background: linear-gradient(135deg, rgb(0, 0, 0), rgb(0, 0, 0))
+}
+
+form .button input:hover{
+    background: linear-gradient(135deg, rgb(100, 98, 98), rgb(100, 98, 98))
+}
+
+@media (max-width: 984px) {
+    .container{
+        max-width: 100%;
+        height: 650px;
+    }
+    .container .logo {
+        margin-top: 0;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .gender-details .category{
+        width: 80%;
+    }
+
+    .container form .user-details{
+        max-height: 440px;  
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(70deg, rgb(245, 245, 245),rgb(0, 0, 0));
+}
+
+/* .popuplogin {
+    justify-content: center;
+    margin: auto;
+    max-width: 400px;
+    display: none;
+} */
+
+.container1 {
+    max-width: 400px;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container1 .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.container1 .title {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 400px;
+    position: relative;
+}
+
+.container1 .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 70px;
+    background: linear-gradient(-95deg, rgb(183, 179, 179), rgb(35, 35, 35))
+}
+
+.container1 form .login-details {
+    display: block;
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .login-details .rememberMe {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+form .login-details .inputbox {
+    width: 100%;
+    margin: 20px 0 12px 0;
+    margin-bottom: 5px;
+}
+
+.login-details .inputbox input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 193, 193);
+    padding-left: 15px;
+    font-size: 15px;
+    border-bottom-width: 1px;
+    transition: all 0.3s ease;
+}
+
+.login-details .inputbox input:focus,
+.login-details .inputbox input:valid{
+    border-color: black;
+}
+
+form .button{
+    height: 45px;
+    width: 100%;
+    margin: 12px 0 0 0; 
+}
+
+form .button input{
+    text-align: center;
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    color: snow;
+    background: linear-gradient(135deg, rgb(0, 0, 0), rgb(0, 0, 0))
+}
+
+form .button input:hover{
+    background: linear-gradient(135deg, rgb(100, 98, 98), rgb(100, 98, 98))
+}
+
+input[type="submit"] {
+    background-color: #015294;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
+
+@media (max-width: 984px) {
+    .container1{
+        max-width: 100%;
+        height: 55vh;
+    }
+    .container1 .title{
+        margin-top: 15px;
+    }
+    form .login-details .inputbox{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .button {
+        margin-top: 0px;
+    }
+    .container1 form .login-details{
+        max-height: 300px;  
+        overflow-y: scroll;
+    }
+
+    .login-details::-webkit-scrollbar{
+        width: 0;
+    }
+}

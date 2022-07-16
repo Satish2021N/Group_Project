@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158.595" height="41" viewBox="0 0 158.595 41">
+  <g id="Group_25" data-name="Group 25" transform="translate(-35.405 -21)">
+    <g id="eyeglasses" transform="translate(35.405 28.744)">
+      <path id="Path_1" data-name="Path 1" d="M16,34.162A9.165,9.165,0,1,0,6.832,25,9.165,9.165,0,0,0,16,34.162Zm0,4.582A13.747,13.747,0,1,0,2.25,25,13.747,13.747,0,0,0,16,38.745Zm36.66-4.582A9.165,9.165,0,1,0,43.492,25,9.165,9.165,0,0,0,52.657,34.162Zm0,4.582A13.747,13.747,0,1,0,38.91,25,13.747,13.747,0,0,0,52.657,38.745Z" transform="translate(2.332 -11.25)" fill-rule="evenodd"/>
+      <path id="Path_2" data-name="Path 2" d="M36.66,18.082a4.582,4.582,0,0,0-4.582,4.582H27.495a9.165,9.165,0,1,1,18.33,0H41.242A4.582,4.582,0,0,0,36.66,18.082ZM0,22.665a2.291,2.291,0,0,1,2.291-2.291H6.874v4.582H2.291A2.291,2.291,0,0,1,0,22.665Zm71.028,2.291H66.446V20.374h4.582a2.291,2.291,0,0,1,0,4.582Z" transform="translate(0 -8.918)" fill-rule="evenodd"/>
+    </g>
+    <text id="Shady" transform="translate(117 51)" font-size="24" font-family="AlphaMondayRegular, Alpha Monday"><tspan x="0" y="0">Shady</tspan></text>
+  </g>
+</svg>

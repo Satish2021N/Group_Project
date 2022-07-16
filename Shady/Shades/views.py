@@ -22,3 +22,6 @@ def womenseyeglasses(request):
 
 def menseyeglasses(request):
     return render(request, 'category/eyeglasses/Mens_Eye_Glasses.html')
+
+def item(request):
+    return render(request, 'items/item.html')

@@ -25,3 +25,6 @@ def menseyeglasses(request):
 
 def item(request):
     return render(request, 'items/item.html')
+
+def cart(request):
+    return render(request, 'items/cart.html')

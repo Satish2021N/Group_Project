@@ -7,5 +7,6 @@ urlpatterns =[
     path('sign-up', views.sign_up, name='sign_up'),
     path('womenseyeglasses', views.womenseyeglasses, name='womenseyeglassses'),
     path('menseyeglasses', views.menseyeglasses, name='menseyeglassses'),
-    path('item', views.item, name='item')
+    path('item', views.item, name='item'),
+    path('cart', views.cart, name='cart')
 ]

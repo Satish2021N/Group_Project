@@ -31,8 +31,9 @@
 img, svg {
     vertical-align: middle; 
     padding: 10px;
+    cursor: pointer;
 }
-#title1{
+#title1{    
     text-align: center;
 }
 #title2{
@@ -42,3 +43,4 @@ img, svg {
     vertical-align: middle; 
     padding: 10px;
 }
+

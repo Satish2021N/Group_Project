@@ -1,49 +1,8 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'Mens_Eye_Glasses_css/style.css' %}">
 <section>
-    <!-- <section id="title">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg">
-                <img class="logo" src="{% static 'Womens_Eye_Glasses_Images/group_25.svg' %}" alt="">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Sunglasses </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Men's Sunglasses</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Women's Sunglasses</a></li>
-                        </ul>
-                    </li> 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Eyeglasses </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown1">
-                        <li><a class="dropdown-item" href="#">Men's Eyeglasses</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Women's Eyeglasses</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=""> Blue Ray Glasses</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Account </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown1">
-                        <li><a class="dropdown-item" href="#">Sign In</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Log In</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </div>
-            </nav>
-        </div>
-     </section> -->
      <section id="title1">
                 <div>
                     <h2> MEN'S EYE GLASSES</h2>
@@ -52,61 +11,37 @@
      <section id="title2">
         <div class="container-fluid">
             <div class="row">
-                <div  class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="{% static 'Womens_Eye_Glasses_Images/Way-Ahead-Of-You.svg' %}" alt="">
-                    <h5> Way-Ahead-Of-You Taurus</h5>
-                    <h5> $32</h5>
-                    <h6>Special Offer</h6>
+                {% for product in products%}
+                <div  class="col-lg-4 col-md-6 img-fluid img_cursor">
+                    <a href="item" style="text-decoration:none">
+                    <img src="{{product.image.url}}" alt="">
+                    <h5> {{product.name}}</h5>
+                    <h5  style="color:#ECB390;"> NRs. {{product.price}}</h5>
+                    <h6>Special Offer</h6></a>
+                    <a class="btn btn-primary" style="margin:1rem" href="{% url 'checkout'%}"> Buy Now</a>
+                    <a class="btn btn-warning" href="carts"> Add to Cart</a>
                 </div>
-                <div class="col-lg-4 col-md-6 img-fluid">
-                    <img src="{% static 'Womens_Eye_Glasses_Images/JJ_E10231.svg' %}" alt="">
+                {%endfor%}
+                <!-- <div class="col-lg-4 col-md-6 img-fluid img_cursor">
+                    <a href="item" style="text-decoration:none">
+                    <img src="{% static 'Mens_Eye_Glasses_Images/LA E12890AF_1.png' %}" alt="">
                     <h5> VC E14712</h5>
-                    <h5> NRs. 4000</h5>
-                    <h6>Special Offer</h6>
+                    <h5 style="  color:#ECB390;"> NRs. 1800</h5>
+                    <h6>Special Offer</h6>  </a>
+                    <a class="btn btn-primary" style="margin:1rem" href="{% url 'checkout'%}"> Buy Now</a>
+                    <a class="btn btn-warning" href="carts"> Add to Cart</a>
                 </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="{% static 'Womens_Eye_Glasses_Images/Bermuda.svg' %}" alt="">
+                <div class="col-lg-4 col-md-6 img-fluid img_cursor">
+                    <a href="item" style="text-decoration:none">
+                    <img src="{% static 'Mens_Eye_Glasses_Images/LA E12890AF.png' %}" alt="">
                     <h5> JJ E10231</h5>
-                    <h4> NRs.390</h4>
-                    <h6>Special Offer</h6>
-                </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="Womens_Eye_Glasses_Images/LA_E12753.svg" alt="">
-                    <h5> JJ E10231</h5>
-                    <h5> NRs.3900</h5>
-                    <h6>Special Offer</h6>
-                </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="Womens_Eye_Glasses_Images/JJ_E14693.svg" alt="">
-                    <h5> JJ E10231</h5>
-                    <h5> NRs.3900</h5>
-                    <h6>Special Offer</h6>
-                </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="Womens_Eye_Glasses_Images/LA_E13518AF.svg" alt="">
-                    <h5> JJ E10231</h5>
-                    <h5> NRs.3900</h5>
-                    <h6>Special Offer</h6>
-                </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="Womens_Eye_Glasses_Images/lae13518af.svg" alt="">
-                    <h5> JJ E10231</h5>
-                    <h5> NRs.3900</h5>
-                    <h6>Special Offer</h6>
-                </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="Womens_Eye_Glasses_Images/Stockton.svg" alt="">
-                    <h5> JJ E10231</h5>
-                    <h5> NRs.3900</h5>
-                    <h6>Special Offer</h6>
-                </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="Womens_Eye_Glasses_Images/Stockton.svg" alt="">
-                    <h5> JJ E10231</h5>
-                    <h5> NRs.3900</h5>
-                    <h6>Special Offer</h6>
-                </div>
+                    <h5 style="  color:#ECB390;"> NRs.1950</h5>
+                    <h6>Special Offer</h6> </a>
+                    <a class="btn btn-primary" style="margin:1rem" href="{% url 'checkout'%}"> Buy Now</a>
+                    <a class="btn btn-warning" href="carts"> Add to Cart</a>
+                </div> -->
             </div>
+          
 
         </div>
     </section>

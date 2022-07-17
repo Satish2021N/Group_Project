@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="cart-table">
+            <div class="row">
+                <div class="title">
+                    <h2>Items in Cart</h2>
+                </div>
+                <div class="col-md">
+                    <h5>item image</h5>
+                    <img src="{% static 'Womens_Eye_Glasses_Images/lae13518af.svg' %}" alt="">
+                </div>
+                <div class="col-md">
+                    <h5>item name</h5>
+                </div>
+                <div class="col-md">
+                    <h5>item Price</h5>
+                </div>
+                <div class="col-md">
+                    <h5>Amount</h5>
+                </div>
+            </div>
+        </div>
+        <div class="checkout">
+            <div class="row">
+                <h2>Total Amount :</h2>
+                <button>Checkout</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

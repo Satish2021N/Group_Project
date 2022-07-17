@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib.auth import login, logout, authenticate
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -21,4 +22,19 @@ def womenseyeglasses(request):
     return render(request, 'category/eyeglasses/Womens_Eye_Glasses.html')
 
 def menseyeglasses(request):
-    return render(request, 'category/eyeglasses/Mens_Eye_Glasses.html')
+    products = Mens_Eye_Glasses.objects.all()
+    context = {'products':products}
+    return render(request, 'category/eyeglasses/Mens_Eye_Glasses.html', context)
+
+def item(request):
+    return render(request, 'items/item.html')
+
+def cart(request):
+    customer = request.user.customer
+    order, created = Order.objects.get_or_create(customer=customer, complete=False)
+    items = order.orderitem_set.all()
+    context = {'items':items}
+    return render(request, 'items/cart.html',context)
+
+def checkout(request):
+    return render(request, 'items/checkout.html')

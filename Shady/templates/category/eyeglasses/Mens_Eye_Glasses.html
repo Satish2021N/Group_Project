@@ -11,31 +11,37 @@
      <section id="title2">
         <div class="container-fluid">
             <div class="row">
-                <div  class="col-lg-4 col-md-6 img-fluid ">
-                    <img src="{% static 'Mens_Eye_Glasses_Images/blue-transparent-blue-full-rim-a.png' %}" alt="">
-                    <h5> Way-Ahead-Of-You Taurus</h5>
-                    <h5  style="  color:#ECB390;"> NRs. 1500</h5>
-                    <h6>Special Offer</h6>
-                    <button style="margin:1rem" class="btn btn-primary"> Buy Now</button>
-                    <button class="btn btn-warning"> Add to Cart</button>
+                {% for product in products%}
+                <div  class="col-lg-4 col-md-6 img-fluid img_cursor">
+                    <a href="item" style="text-decoration:none">
+                    <img src="{{product.image.url}}" alt="">
+                    <h5> {{product.name}}</h5>
+                    <h5  style="color:#ECB390;"> NRs. {{product.price}}</h5>
+                    <h6>Special Offer</h6></a>
+                    <a class="btn btn-primary" style="margin:1rem" href="{% url 'checkout'%}"> Buy Now</a>
+                    <a class="btn btn-warning" href="carts"> Add to Cart</a>
                 </div>
-                <div class="col-lg-4 col-md-6 img-fluid">
+                {%endfor%}
+                <!-- <div class="col-lg-4 col-md-6 img-fluid img_cursor">
+                    <a href="item" style="text-decoration:none">
                     <img src="{% static 'Mens_Eye_Glasses_Images/LA E12890AF_1.png' %}" alt="">
                     <h5> VC E14712</h5>
                     <h5 style="  color:#ECB390;"> NRs. 1800</h5>
-                    <h6>Special Offer</h6>
-                    <button style="margin:1rem" class="btn btn-primary"> Buy Now</button>
-                    <button class="btn btn-warning"> Add to Cart</button>
+                    <h6>Special Offer</h6>  </a>
+                    <a class="btn btn-primary" style="margin:1rem" href="{% url 'checkout'%}"> Buy Now</a>
+                    <a class="btn btn-warning" href="carts"> Add to Cart</a>
                 </div>
-                <div class="col-lg-4 col-md-6 img-fluid ">
+                <div class="col-lg-4 col-md-6 img-fluid img_cursor">
+                    <a href="item" style="text-decoration:none">
                     <img src="{% static 'Mens_Eye_Glasses_Images/LA E12890AF.png' %}" alt="">
                     <h5> JJ E10231</h5>
                     <h5 style="  color:#ECB390;"> NRs.1950</h5>
-                    <h6>Special Offer</h6>
-                    <button style="margin:1rem" class="btn btn-primary"> Buy Now</button>
-                    <button class="btn btn-warning"> Add to Cart</button>
-                </div>
+                    <h6>Special Offer</h6> </a>
+                    <a class="btn btn-primary" style="margin:1rem" href="{% url 'checkout'%}"> Buy Now</a>
+                    <a class="btn btn-warning" href="carts"> Add to Cart</a>
+                </div> -->
             </div>
+          
 
         </div>
     </section>

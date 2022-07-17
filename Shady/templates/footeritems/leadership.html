@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+    <section class="lead">
+        <div class="leadmain">
+            <div class="row">
+                <div class="col-md-4" style="text-align: center;">
+                    <img src="{% static 'Landing_Page_Images/Leadership.png' %}" alt="Image" style="height: 55vh; width: 600px;">
+                </div>
+                <div class="col-md">
+                    <div class="leadtxt" style="margin-top: 40px;">
+                        <h1>Team : <span>Scared Of Deadlines</span></h1>
+                        <ul style="text-decoration: none; list-style-type: none;">  
+                            <li>Satish Pradhan</li>
+                            <li>Rahul Shakya</li>
+                            <li>Bikas Limbu</li>
+                            <li>Anoj KC</li>
+                            <li>Gaurav Shahi</li>
+                        </ul>
+                
+                        <h2> Leadership </h2>
+                        <p> 
+                            The team was led by our leader Satish Pradhan
+                        </p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    
+{% endblock content %}

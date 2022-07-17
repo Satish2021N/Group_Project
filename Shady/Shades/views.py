@@ -28,3 +28,9 @@ def item(request):
 
 def cart(request):
     return render(request, 'items/cart.html')
+
+def about(request):
+    return render(request, 'footeritems/about.html')
+
+def lead(request):
+    return render(request, 'footeritems/leadership.html')
